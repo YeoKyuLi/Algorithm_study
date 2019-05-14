@@ -5,6 +5,7 @@
 //  Created by Yeo Kyu Li on 12/05/2019.
 //  Copyright © 2019 Yeo Kyu Li. All rights reserved.
 //
+// 후진시 청소, 벽이면 작동은 멈춘다.
 
 #include <iostream>
 #include <queue>
