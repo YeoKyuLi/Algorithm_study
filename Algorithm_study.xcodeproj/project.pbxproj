@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8E25581A2289A51000197164 /* 로봇청소기 (14503).cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E6312712288353C004AB3BF /* 로봇청소기 (14503).cpp */; };
+		8E2F2B362291382700EEA3C8 /* 케빈 베이컨의 6단계 법칙 (1389) - dijkstra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F2B352291382700EEA3C8 /* 케빈 베이컨의 6단계 법칙 (1389) - dijkstra.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,7 @@
 		8E2A3AD4224BA12300F25F62 /* 쇠막대기(10799).cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "쇠막대기(10799).cpp"; sourceTree = "<group>"; };
 		8E2A3AD6224BB7D000F25F62 /* 큐(10845).cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "큐(10845).cpp"; sourceTree = "<group>"; };
 		8E2A3AD8224BBEC900F25F62 /* 조세퍼스(1158).cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "조세퍼스(1158).cpp"; sourceTree = "<group>"; };
+		8E2F2B352291382700EEA3C8 /* 케빈 베이컨의 6단계 법칙 (1389) - dijkstra.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "케빈 베이컨의 6단계 법칙 (1389) - dijkstra.cpp"; sourceTree = "<group>"; };
 		8E2F92E42268996100DB62C6 /* 트리 순회 (1991).cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "트리 순회 (1991).cpp"; sourceTree = "<group>"; };
 		8E2F92E62268BA0600DB62C6 /* 트리의 부모 찾기 (11725).cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "트리의 부모 찾기 (11725).cpp"; sourceTree = "<group>"; };
 		8E2FBE85224E232A00BD19C9 /* 덱(10866).cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "덱(10866).cpp"; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				8E18BCE7227AF79500E91565 /* 유기농 배추 [DFS] (1012).cpp */,
 				8E18BCE4227ACAD500E91565 /* 유기농 배추 [BFS] (1012).cpp */,
 				8E6312712288353C004AB3BF /* 로봇청소기 (14503).cpp */,
+				8E2F2B352291382700EEA3C8 /* 케빈 베이컨의 6단계 법칙 (1389) - dijkstra.cpp */,
 			);
 			name = "가혜랑 스터디";
 			path = "가혜랑 스터디";
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E2F2B362291382700EEA3C8 /* 케빈 베이컨의 6단계 법칙 (1389) - dijkstra.cpp in Sources */,
 				8E25581A2289A51000197164 /* 로봇청소기 (14503).cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
