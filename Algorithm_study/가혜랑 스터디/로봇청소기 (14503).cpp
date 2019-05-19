@@ -5,8 +5,7 @@
 //  Created by Yeo Kyu Li on 12/05/2019.
 //  Copyright © 2019 Yeo Kyu Li. All rights reserved.
 //
-// 후진시 청소, 벽이면 작동은 멈춘다.
-
+// 핵심 포인트, 처음에 dx, dy를 어떤 순서대로 넣어 줄 것인가!
 #include <iostream>
 #include <queue>
 #include <algorithm>
@@ -14,8 +13,10 @@ using namespace std;
 int arr[101][101];
 bool visited[101][101];
 int N, M, r,c,d;
-int dx[] = {0, 1, 0, -1}; // 서
-int dy[] = {1, 0, -1, 0};
+//int dx[] = {0, 1, 0, -1}; // 북,동,남,서
+//int dy[] = {1, 0, -1, 0};
+int dx[] = {-1, 0, 1, 0}; // 서, 북, 동, 남
+int dy[] = {0, 1, 0, -1};
 int cnt = 0;
 
 int directionNext(int d){
@@ -42,8 +43,7 @@ int directionBack(int d){
 }
 void BFS(int a, int b, int d){
     //0 N, 1 E, 2 S, 3 W
-
-    ++cnt;
+    cnt += 1;
     
     queue<pair<int,int>> que;
     que.push(make_pair(a,b));
@@ -65,35 +65,40 @@ void BFS(int a, int b, int d){
                     go = true;
                     visited[nx][ny] = true;
                     que.push(make_pair(nx,ny));
-                    ++cnt;
+                    cnt += 1;
                     break;
                 }
             }
         }
-        if(!go){
-            int back = directionBack(d);
+        if(go == false){
+            int back = directionBack(next);
             int bx = x + dx[back];
             int by = y + dy[back];
-
+            //            cout << "back " << back << " next " << next << endl;
+            //            cout <<"x,y (" << x <<" , " << y << ") " <<"bx, by (" << bx << ", " << by << ") arr[bx][by] : " <<  arr[bx][by] << endl;
             if(arr[bx][by] == 1)
                 break;
+            
             que.push(make_pair(bx,by));
-
+            
         }
     }
 }
 int main()
 {
-    cin >> N >> M >> r >> c >> d;
+    ios_base::sync_with_stdio();
+    cin.tie(0);
+    cout.tie(0);
+    cin >> N >> M >>  r >> c >> d;
     
     for(int i = 0 ; i < N ; i ++){
         for(int j = 0 ; j < M ; j++){
             cin >> arr[i][j];
         }
     }
-
     BFS(r,c,d);
     
     cout << cnt << endl;
     return 0;
 }
+
