@@ -17,7 +17,6 @@ vector<int> makeTable(string pattern){
     int j = 0;
     for(int i =1; i < patternSize;i++){
         while(j>0 && pattern[i] != pattern[j]){
-            cout << j << endl;
             j = table[j-1];
         }
         if(pattern[i] == pattern[j]){
@@ -36,12 +35,12 @@ void KMP(string parent, string pattern){
     int j = 0;
     for(int i = 0; i < parentSize; i++){
         while(j>0 && parent[i] != pattern[j]){
-            j = table[i-1];
+            j = table[j-1];
         }
         if(parent[i] == pattern[j]){
             if(j==patternSize-1){
                 cout << (i - patternSize)+2 << "번째에서 찾았습니다." << endl;
-                j = table[i];
+                j = table[j];
             }
             else{
                 j++;
@@ -57,12 +56,11 @@ int main()
     string pattern ="abacaaba";
     KMP(parent,pattern);
 
-    cout <<" ??"<<endl;
 
-//    vector<int> table = makeTable(pattern);
-//    for(int i = 0; i < table.size(); i++){
-//        cout << table[i] << " ";
-//    }
+    vector<int> table = makeTable(pattern);
+    for(int i = 0; i < table.size(); i++){
+        cout << table[i] << " ";
+    }
     return 0;
 }
 
