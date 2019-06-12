@@ -10,11 +10,11 @@
 #include <cstring>
 #include <queue>
 #include <algorithm>
-
+//#include <cstdlib>
 using namespace std;
 int N, L, R;
-int arr[101][101];
-bool visited[101][101];
+int arr[51][51];
+bool visited[51][51];
 int ppl, national;
 queue<pair<int,int>> close_natioanl;
 
@@ -22,7 +22,7 @@ void BFS(int a, int b){
     int dx[] = {1,-1,0,0};
     int dy[] = {0,0,1,-1};
     queue<pair<int,int>> q;
-    
+
     ppl = arr[a][b];
     visited[a][b]= true;
     q.push(make_pair(a, b));
@@ -35,7 +35,7 @@ void BFS(int a, int b){
             int nx = x + dx[i];
             int ny = y + dy[i];
             
-            int diff = abs(arr[nx][ny]- arr[a][b]);
+            int diff = abs(arr[nx][ny] - arr[x][y]);
             if(nx >= 0 && ny >= 0 && nx < N && ny < N && L <= diff && diff <= R && !visited[nx][ny]){
                 visited[nx][ny]= true;
                 ppl += arr[nx][ny];
@@ -43,17 +43,16 @@ void BFS(int a, int b){
                 close_natioanl.push(make_pair(nx, ny));
                 q.push(make_pair(nx,ny));
             }
-            
         }
-        
-        
     }
-    
-    
 }
 
 int main()
 {
+    ios_base::sync_with_stdio();
+    cin.tie(0);
+    cout.tie(0);
+    
     cin >> N >> L >> R;
     
     for(int i = 0 ; i < N; i++){
@@ -63,8 +62,9 @@ int main()
     }
     
     int movePpl = 0;
-    while(1){
-        bool found = false;
+    bool found = true;
+    while(found){
+        found = false;
         memset(visited, false, sizeof(visited));
         for(int i = 0 ; i < N; i++){
             for(int j = 0 ; j < N; j++){
@@ -75,7 +75,6 @@ int main()
                 
                 if(national >= 2){
                     found = true;
-                    cout << "size : " << close_natioanl.size() << " " << national << endl;
                     int avr = ppl / national;
                     while(!close_natioanl.empty()){
                         arr[close_natioanl.front().first][close_natioanl.front().second] = avr;
@@ -84,12 +83,13 @@ int main()
                 }
             }
         }
-        if(found)
-            movePpl++;
-        else
-            break;
+       
+        if(found){
+            movePpl++;}
+        else{
+            break;}
     }
     cout << movePpl << endl;
-    
+
     return 0;
 }
