@@ -1,2 +1,3 @@
-This is for recoring of my Alrogithm study.
+# Alrogithm
+This is for the recording of my Algorithm study.
 
