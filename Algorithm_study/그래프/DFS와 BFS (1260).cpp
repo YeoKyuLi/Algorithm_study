@@ -54,11 +54,21 @@ int main()
         adj[s].push_back(e);
         adj[e].push_back(s);
     }
-    
+
     for(int i = 1 ; i <=n ; i++){
         sort(adj[i].begin(), adj[i].end());
     }
+    cout << endl;
+    for(int i = 1 ; i <= n ; i++){
+        cout << i << " " ;
+        for(int x : adj[i]){
+            cout << x << " ";
+        }
+        cout << endl;
+    }
     
+    cout << endl;
+
     DFS(v);
     cout << endl;
     memset(visit, 0, sizeof(visit));
