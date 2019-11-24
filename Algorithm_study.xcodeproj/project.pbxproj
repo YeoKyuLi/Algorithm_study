@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E329CF222F06B69003B2DAB /* Linked List.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E329CF122F06B69003B2DAB /* Linked List.cpp */; };
+		8E72E47F23813EE100D560D5 /* FindTheFrequency.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E72E47E23813EE100D560D5 /* FindTheFrequency.cpp */; };
+		8E72E4812381548300D560D5 /* ModularExponentiationForLargeNumber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E72E4802381548300D560D5 /* ModularExponentiationForLargeNumber.cpp */; };
+		8E9ADB862370522A007964AC /* 케빈 베이컨의 6단계 법칙 (1389) - dijkstra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F2B352291382700EEA3C8 /* 케빈 베이컨의 6단계 법칙 (1389) - dijkstra.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +54,7 @@
 		8E2A3AD4224BA12300F25F62 /* 쇠막대기(10799).cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "쇠막대기(10799).cpp"; sourceTree = "<group>"; };
 		8E2A3AD6224BB7D000F25F62 /* 큐(10845).cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "큐(10845).cpp"; sourceTree = "<group>"; };
 		8E2A3AD8224BBEC900F25F62 /* 조세퍼스(1158).cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "조세퍼스(1158).cpp"; sourceTree = "<group>"; };
+		8E2D59F923477689004375C8 /* LinkedList New.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "LinkedList New.cpp"; sourceTree = "<group>"; };
 		8E2F2B352291382700EEA3C8 /* 케빈 베이컨의 6단계 법칙 (1389) - dijkstra.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "케빈 베이컨의 6단계 법칙 (1389) - dijkstra.cpp"; sourceTree = "<group>"; };
 		8E2F92E42268996100DB62C6 /* 트리 순회 (1991).cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "트리 순회 (1991).cpp"; sourceTree = "<group>"; };
 		8E2F92E62268BA0600DB62C6 /* 트리의 부모 찾기 (11725).cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "트리의 부모 찾기 (11725).cpp"; sourceTree = "<group>"; };
@@ -77,6 +80,8 @@
 		8E63126D2287D871004AB3BF /* Hash With array.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Hash With array.cpp"; sourceTree = "<group>"; };
 		8E63126F2287ED19004AB3BF /* 듣보잡(1764) - hash(map).cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "듣보잡(1764) - hash(map).cpp"; sourceTree = "<group>"; };
 		8E6312712288353C004AB3BF /* 로봇청소기 (14503).cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "로봇청소기 (14503).cpp"; sourceTree = "<group>"; };
+		8E72E47E23813EE100D560D5 /* FindTheFrequency.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FindTheFrequency.cpp; sourceTree = "<group>"; };
+		8E72E4802381548300D560D5 /* ModularExponentiationForLargeNumber.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ModularExponentiationForLargeNumber.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				8E329CF122F06B69003B2DAB /* Linked List.cpp */,
+				8E2D59F923477689004375C8 /* LinkedList New.cpp */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -239,6 +245,7 @@
 		8E62E41122426D0400D5CE00 /* Algorithm_study */ = {
 			isa = PBXGroup;
 			children = (
+				8E72E47D23813EB000D560D5 /* GreeksForGreeks */,
 				8E329CF022F06B4B003B2DAB /* Basic */,
 				8E34E70522BA56B0006CAA67 /* CodeUp */,
 				8E18BCEB22802A6C00E91565 /* 해싱 */,
@@ -251,6 +258,15 @@
 				8E0E24802250FD85005129F8 /* 자료구조 */,
 			);
 			path = Algorithm_study;
+			sourceTree = "<group>";
+		};
+		8E72E47D23813EB000D560D5 /* GreeksForGreeks */ = {
+			isa = PBXGroup;
+			children = (
+				8E72E47E23813EE100D560D5 /* FindTheFrequency.cpp */,
+				8E72E4802381548300D560D5 /* ModularExponentiationForLargeNumber.cpp */,
+			);
+			path = GreeksForGreeks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,7 +326,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E329CF222F06B69003B2DAB /* Linked List.cpp in Sources */,
+				8E9ADB862370522A007964AC /* 케빈 베이컨의 6단계 법칙 (1389) - dijkstra.cpp in Sources */,
+				8E72E4812381548300D560D5 /* ModularExponentiationForLargeNumber.cpp in Sources */,
+				8E72E47F23813EE100D560D5 /* FindTheFrequency.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
